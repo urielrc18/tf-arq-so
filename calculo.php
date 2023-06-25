@@ -15,31 +15,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cuota_inicial = $_POST["cuota_inicial"];
     $tea = $_POST["tea"];
     $plazo = $_POST["plazo"];
-    $frecuencia_pago = $_POST["frecuencia_pago"];  // Agregado
 
     $cuota_inicial = $prestamo * ($cuota_inicial / 100);
     $saldo_inicial = $prestamo - $cuota_inicial;
-
-    // Cálculos según la frecuencia de pago
-    switch ($frecuencia_pago) {
-        case 'quincenal':
-            $total_cuotas = $plazo * 24;
-            $tes = pow(1 + ($tea / 100), 1 / 24) - 1;
-            break;
-        case 'mensual':
-            $total_cuotas = $plazo * 12;
-            $tes = pow(1 + ($tea / 100), 1 / 12) - 1;
-            break;
-        case 'semestral':
-            $total_cuotas = $plazo * 2;
-            $tes = pow(1 + ($tea / 100), 1 / 2) - 1;
-            break;
-        case 'anual':
-            $total_cuotas = $plazo;
-            $tes = $tea / 100;
-            break;
-    }
-
+    $tes = pow(1 + ($tea / 100), 0.5) - 1;
+    $total_cuotas = $plazo * 2;
     $cuota = ($saldo_inicial * $tes) / (1 - pow(1 + $tes, -$total_cuotas));
 
     $sql = "INSERT INTO prestamos (prestamo, cuota_inicial, tea, plazo, tes, total_cuotas, cuota)
