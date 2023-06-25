@@ -15,11 +15,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cuota_inicial = $_POST["cuota_inicial"];
     $tea = $_POST["tea"];
     $plazo = $_POST["plazo"];
+    $frecuencia = $_POST["frecuencia"];
+    $frec1 = 2;
+    switch ($frecuencia) {
+    case 'semestral':
+        $frec1 = 2;
+        break;
+    case 'anual':
+        $frec1 = 1;
+        break;
+    case 'quincenal':
+        $frec1 = 24;
+        break;
+    case 'mensual':
+        $frec1 = 12;
+        break;
+    case 'semanal':
+        $frec1 = 48;
+        break;
+    default:
+        echo "Valor de frecuencia desconocido: $frecuencia";
 
     $cuota_inicial = $prestamo * ($cuota_inicial / 100);
     $saldo_inicial = $prestamo - $cuota_inicial;
     $tes = pow(1 + ($tea / 100), 0.5) - 1;
-    $total_cuotas = $plazo * 2;
+    $total_cuotas = $plazo * $frec1;
     $cuota = ($saldo_inicial * $tes) / (1 - pow(1 + $tes, -$total_cuotas));
 
     $sql = "INSERT INTO prestamos (prestamo, cuota_inicial, tea, plazo, tes, total_cuotas, cuota)
