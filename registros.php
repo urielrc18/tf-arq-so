@@ -8,6 +8,16 @@ $dbname = "heroku_a1f1d7ba1837c0b";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
+<?php
+include 'navbar.php';
+$servername = "us-cdbr-east-06.cleardb.net";
+$username = "b0c75fe74aa810";
+$password = "dc197b2a";
+$dbname = "heroku_a1f1d7ba1837c0b";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
@@ -31,16 +41,17 @@ $conn->close();
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Préstamo</th>
-                    <th>Cuota Inicial</th>
-                    <th>TEA</th>
-                    <th>Plazo</th>
-                    <th>TES</th>
-                    <th>Total Cuotas</th>
-                    <th>Cuota</th>
-                    <th>Fecha</th>
-                    <th></th>
+                <th>ID</th>
+                <th>Préstamo</th>
+                <th>Cuota Inicial</th>
+                <th>TEA</th>
+                <th>Plazo</th>
+                <th>Frecuencia de Pago</th>
+                <th>TES</th>
+                <th>Total Cuotas</th>
+                <th>Cuota</th>
+                <th>Fecha</th>
+                <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -48,7 +59,7 @@ $conn->close();
                 if ($result->num_rows > 0) {
                     while($row = $result->fetch_assoc()) {
                         echo "<tr><td>" . $row["id"]. "</td><td>" . $row["prestamo"]. "</td><td>" . $row["cuota_inicial"]. "</td><td>"
-                        . $row["tea"]. "</td><td>" . $row["plazo"]. "</td><td>" . $row["tes"]. "</td><td>"
+                        . $row["tea"]. "</td><td>" . $row["plazo"]. "</td><td>" . $row["frecuencia_pago"]. "</td><td>" . $row["tes"]. "</td><td>"
                         . $row["total_cuotas"]. "</td><td>" . $row["cuota"]. "</td><td>" . $row["fecha"]. "</td>
                         <td><button class='btn btn-primary ver-detalles' data-id='" . $row["id"]. "'>Ver detalles</button></td></tr>";
                     }
@@ -75,3 +86,4 @@ $conn->close();
     </script>
 </body>
 </html>
+
