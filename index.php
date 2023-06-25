@@ -1,5 +1,5 @@
 <?php
-include 'navbar.php';
+
 // Iniciar sesión al inicio
 session_start();
 
