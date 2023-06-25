@@ -10,13 +10,13 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-// if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//     $prestamo = $_POST["prestamo"];
-//     $cuota_inicial = $_POST["cuota_inicial"];
-//     $tea = $_POST["tea"];
-//     $plazo = $_POST["plazo"];
-//     $frecuencia = $_POST["frecuencia"];
-//     $frec1 = 2;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+     $prestamo = $_POST["prestamo"];
+     $cuota_inicial = $_POST["cuota_inicial"];
+     $tea = $_POST["tea"];
+     $plazo = $_POST["plazo"];
+     $frecuencia = $_POST["frecuencia"];
+     $frec1 = 2;
 //     switch ($frecuencia) {
 //     case 'semestral':
 //         $frec1 = 2;
