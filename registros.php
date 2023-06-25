@@ -71,5 +71,6 @@ $conn->close();
         });
     });
     </script>
+    <a href="detalles.php" class="btn btn-primary mt-3">Ver todos los préstamos</a>
 </body>
 </html>
