@@ -26,6 +26,17 @@
                 <label for="plazo">Plazo (años):</label>
                 <input type="number" id="plazo" name="plazo" class="form-control" required>
             </div>
+            <div class="form-group">
+                <label for="frecuencia">Frecuencia de Pago:</label>
+                <select id="frecuencia" name="frecuencia" class="form-control" required>
+                    <option value="">Seleccione</option>
+                    <option value="quincenal">Quincenal</option>
+                    <option value="mensual">Mensual</option>
+                    <option value="semestral">Semestral</option>
+                    <option value="anual">Anual</option>
+                    <option value="semanal">Semanal</option>
+                </select>
+            </div>
             <button type="submit" class="btn btn-primary">Calcular</button>
         </form>
     </div>
