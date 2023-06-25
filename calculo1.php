@@ -27,7 +27,7 @@
                 <input type="number" id="plazo" name="plazo" class="form-control" required>
             </div>
             <div class="form-group">
-                <label for="frecuencia">frecuencia:</label>
+                <label for="frecuencia">Frecuencia (Cantidad de veces por año):</label>
                 <input type="number" id="frecuencia" name="frecuencia" class="form-control" required>
             </div>
             <button type="submit" class="btn btn-primary">Calcular</button>
