@@ -17,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      $plazo = $_POST["plazo"];
      $frecuencia = $_POST["frecuencia"];
      $frec1 = 2;
+    echo $frecuencia
 //     switch ($frecuencia) {
 //     case 'semestral':
 //         $frec1 = 2;
