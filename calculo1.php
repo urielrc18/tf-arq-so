@@ -27,15 +27,8 @@
                 <input type="number" id="plazo" name="plazo" class="form-control" required>
             </div>
             <div class="form-group">
-                <label for="frecuencia">Frecuencia de Pago:</label>
-                <select type="number" id="frecuencia" name="frecuencia" class="form-control" required>
-                    <option value="">Seleccione</option>
-                    <option value="24">Quincenal</option>
-                    <option value="12">Mensual</option>
-                    <option value="2">Semestral</option>
-                    <option value="1">Anual</option>
-                    <option value="48">Semanal</option>
-                </select>
+                <label for="frecuencia">frecuencia:</label>
+                <input type="number" id="frecuencia" name="frecuencia" class="form-control" required>
             </div>
             <button type="submit" class="btn btn-primary">Calcular</button>
         </form>
