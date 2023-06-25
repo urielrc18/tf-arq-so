@@ -77,7 +77,6 @@ $conn->close();
 </head>
 <body>
     <a href="calculo1.php" class="btn btn-primary mt-3">Atrás</a>
-<a class="btn btn-primary" href="index.html">Regresar a Inicio</a>
     <div class="container">
         <h1 class="mt-4 mb-3">Calculadora de Préstamo - Resultado</h1>
 
