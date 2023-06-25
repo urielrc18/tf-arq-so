@@ -41,5 +41,6 @@ $conn->close();
             echo "<tr><td colspan='6'>No hay detalles para este préstamo</td></tr>";
         }
         ?>
+<a href="calculo.php" class="btn btn-primary mt-3">Ver todos los préstamos</a>
     </tbody>
 </table>
