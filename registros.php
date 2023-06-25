@@ -24,6 +24,7 @@ $conn->close();
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 <body>
+    <a href="calculo.php" class="btn btn-primary mt-3">Regresar</a>
     <div class="container">
         <h1 class="mt-4 mb-3">Todos los préstamos</h1>
         <table class="table table-striped">
