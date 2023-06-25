@@ -16,7 +16,7 @@ $result = $conn->query($sql);
 
 $conn->close();
 ?>
-
+<a href="calculo.php" class="btn btn-primary mt-3">Regresar</a>
 <h2>Detalles del Préstamo <?php echo $prestamo_id; ?></h2>
 <table class="table table-striped">
     <thead>
@@ -41,6 +41,5 @@ $conn->close();
             echo "<tr><td colspan='6'>No hay detalles para este préstamo</td></tr>";
         }
         ?>
-<a href="calculo.php" class="btn btn-primary mt-3">Ver todos los préstamos</a>
     </tbody>
 </table>
