@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cuota_inicial = $prestamo * ($cuota_inicial / 100);
     $saldo_inicial = $prestamo - $cuota_inicial;
     $tes = pow(1 + ($tea / 100), 0.5) - 1;
-    $total_cuotas = $plazo * frecuencia;
+    $total_cuotas = $plazo * 2;
     $cuota = ($saldo_inicial * $tes) / (1 - pow(1 + $tes, -$total_cuotas));
 
     $sql = "INSERT INTO prestamos (prestamo, cuota_inicial, tea, plazo, tes, total_cuotas, cuota)
