@@ -28,7 +28,7 @@
             </div>
             <div class="form-group">
                 <label for="frecuencia">Frecuencia de Pago:</label>
-                <select id="frecuencia" name="frecuencia" class="form-control" required>
+                <select type="number" id="frecuencia" name="frecuencia" class="form-control" required>
                     <option value="">Seleccione</option>
                     <option value="24">Quincenal</option>
                     <option value="12">Mensual</option>
