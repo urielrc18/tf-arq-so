@@ -1,5 +1,3 @@
-
-
 <?php
 $servername = "us-cdbr-east-06.cleardb.net";
 $username = "b0c75fe74aa810";
