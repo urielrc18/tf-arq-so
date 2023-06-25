@@ -1,3 +1,26 @@
+<?php
+
+// Iniciar sesión al inicio
+session_start();
+
+// Comprobar si el formulario ha sido enviado
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    // Comprobar si el nombre de usuario y la contraseña son correctos
+    if ($username == "admin" && $password == "admin") {
+        // Iniciar sesión y redirigir a index.php
+        $_SESSION["loggedin"] = true;
+        header("Location: calculo1.php");
+        exit;
+    } else {
+        // Mostrar un mensaje de error
+        $error = "Nombre de usuario o contraseña incorrectos";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
