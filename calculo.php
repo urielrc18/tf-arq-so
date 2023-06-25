@@ -1,4 +1,6 @@
+
 <?php
+include 'navbar.php'
 $servername = "us-cdbr-east-06.cleardb.net";
 $username = "b0c75fe74aa810";
 $password = "dc197b2a";
