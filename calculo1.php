@@ -30,11 +30,11 @@
                 <label for="frecuencia">Frecuencia de Pago:</label>
                 <select id="frecuencia" name="frecuencia" class="form-control" required>
                     <option value="">Seleccione</option>
-                    <option value="quincenal">Quincenal</option>
-                    <option value="mensual">Mensual</option>
-                    <option value="semestral">Semestral</option>
-                    <option value="anual">Anual</option>
-                    <option value="semanal">Semanal</option>
+                    <option value="24">Quincenal</option>
+                    <option value="12">Mensual</option>
+                    <option value="2">Semestral</option>
+                    <option value="1">Anual</option>
+                    <option value="48">Semanal</option>
                 </select>
             </div>
             <button type="submit" class="btn btn-primary">Calcular</button>
