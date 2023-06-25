@@ -16,7 +16,7 @@ $result = $conn->query($sql);
 
 $conn->close();
 ?>
-<a href="calculo.php" class="btn btn-primary mt-3">Regresar</a>
+<a href="registros.php" class="btn btn-primary mt-3">Regresar</a>
 <h2>Detalles del Préstamo <?php echo $prestamo_id; ?></h2>
 <table class="table table-striped">
     <thead>
