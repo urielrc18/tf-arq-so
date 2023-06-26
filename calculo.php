@@ -66,12 +66,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
         
+if($i == $total_cuotas){
+          $tabla .= "<tr>
+                        <td>$i</td>
+                        <td>$tea%</td>
+                        <td>$tes%</td>
+                        <td>S</td>
+                        <td>$saldo_actual</td>
+                        <td>$interes</td>
+                        <td>$cuota</td>
+                        <td>$amortizacion</td>
+                        <td>0</td>
+                   </tr>";
 
+        $saldo_actual = $saldo_final;
         if ($i == $total_cuotas) {
             $saldo_final = 0;
             break;
         }
-        $tabla .= "<tr>
+}
+else{
+      $tabla .= "<tr>
                         <td>$i</td>
                         <td>$tea%</td>
                         <td>$tes%</td>
@@ -84,7 +99,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                    </tr>";
 
         $saldo_actual = $saldo_final;
+        if ($i == $total_cuotas) {
+            $saldo_final = 0;
+            break;
+        }
+}
 
+  
        
     }
 }
