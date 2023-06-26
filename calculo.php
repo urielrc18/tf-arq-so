@@ -65,7 +65,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($conn->query($sql) === FALSE) {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
+        
 
+        if ($i == $total_cuotas) {
+            $saldo_final = 0;
+            break;
+        }
         $tabla .= "<tr>
                         <td>$i</td>
                         <td>$tea%</td>
@@ -80,10 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $saldo_actual = $saldo_final;
 
-        if ($i == $total_cuotas) {
-            $saldo_final = 0;
-            break;
-        }
+       
     }
 }
 
